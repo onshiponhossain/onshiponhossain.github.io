@@ -1,0 +1,1 @@
+const b=document.getElementById("menuBtn"),m=document.getElementById("menu");b.onclick=()=>m.classList.toggle("show");
