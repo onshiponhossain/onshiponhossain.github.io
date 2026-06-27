@@ -1,12 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
-    line-height: 1.6;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#1f2937;
+}
+
+nav{
+    background:#0f172a;
+    color:white;
+    padding:20px 40px;
+}
+
+nav h2{
+    font-size:24px;
+    font-weight:600;
+}
+
+section{
+    padding:80px 40px;
+}
+
+h1{
+    font-size:48px;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+h3{
+    font-size:24px;
+    color:#c59d0b;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:700px;
 }
