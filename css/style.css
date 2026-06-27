@@ -5,5 +5,8 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     background: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.6;
 }
