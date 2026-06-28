@@ -3,447 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Projects | Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="A professional showcase of academic projects, marketing research, presentations, and case studies by Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology.">
-    <meta name="keywords" content="Projects, Portfolio, Marketing Research, Case Studies, Md. Shipon Hossain, Jashore University of Science and Technology">
-    <meta name="author" content="Md. Shipon Hossain">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Portfolio projects and case studies by Md. Shipon Hossain.">
+    <meta name="theme-color" content="#0078D4">
+    <meta property="og:title" content="Projects | Md. Shipon Hossain">
+    <meta property="og:description" content="Portfolio projects and case studies by Md. Shipon Hossain.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/projects.html">
-    <meta property="og:title" content="Projects | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="A professional showcase of academic projects, marketing research, and case studies by Md. Shipon Hossain.">
-    <meta property="og:image" content="images/profile.jpg">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/projects.html">
-    <meta property="twitter:title" content="Projects | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="A professional showcase of academic projects, marketing research, and case studies by Md. Shipon Hossain.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <title>Projects | Md. Shipon Hossain</title>
     
-    <!-- Canonical URL & PWA -->
-    <link rel="canonical" href="https://www.yourdomain.com/projects.html">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <!-- Navigation -->
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <!-- Hero Banner -->
-        <section class="page-hero" aria-labelledby="projects-title">
-            <div class="container hero-centered">
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li aria-current="page">Projects</li>
-                    </ol>
-                </nav>
-                <h1 id="projects-title" class="page-title">Projects</h1>
-                <p class="page-subtitle">A showcase of my academic, research and professional work.</p>
-            </div>
-        </section>
-
-        <!-- Introduction -->
-        <section class="projects-intro-section" aria-label="Projects Introduction">
-            <div class="container text-center">
-                <p class="intro-paragraph prose">[Placeholder] Welcome to my project portfolio. This page highlights my hands-on experience, ranging from comprehensive marketing plans and consumer behavior analyses to academic presentations and research projects focused on the Bangladesh market and beyond. Each project represents a step forward in applying theoretical business concepts to practical, real-world challenges.</p>
-            </div>
-        </section>
-
-        <!-- Project Categories Filter -->
-        <section class="project-filters-section" aria-label="Project Categories">
+        <!-- Page Header -->
+        <section class="page-header reveal">
             <div class="container">
-                <div class="filter-group">
-                    <button class="btn-filter active" aria-pressed="true">All</button>
-                    <button class="btn-filter" aria-pressed="false">Academic</button>
-                    <button class="btn-filter" aria-pressed="false">Research</button>
-                    <button class="btn-filter" aria-pressed="false">Marketing</button>
-                    <button class="btn-filter" aria-pressed="false">Presentation</button>
-                    <button class="btn-filter" aria-pressed="false">Future Projects</button>
-                </div>
+                <h1 class="page-title">Projects & Case Studies</h1>
+                <p class="page-subtitle">A collection of my academic, personal, and professional marketing projects.</p>
             </div>
         </section>
 
-        <!-- Featured Project -->
-        <section class="featured-project-section" aria-labelledby="featured-project-heading">
+        <!-- Projects Grid -->
+        <section class="section reveal">
             <div class="container">
-                <h2 id="featured-project-heading" class="sr-only">Featured Project</h2>
-                <article class="featured-project-card glass-panel">
-                    <div class="featured-image-col">
-                        <div class="featured-image-placeholder" aria-label="Placeholder image for the featured project">
-                            <span class="placeholder-icon">🖼️</span>
-                        </div>
-                    </div>
-                    <div class="featured-content-col">
-                        <span class="badge-category">Featured Marketing Project</span>
-                        <h3 class="featured-title">[Placeholder] Strategic Market Entry Plan for FMCG in Bangladesh</h3>
-                        <p class="featured-desc">[Placeholder] A comprehensive academic project analyzing the feasibility, consumer behavior, and competitive landscape for introducing a new FMCG product line in the Dhaka and Khulna divisions. The project covers supply chain logistics, digital marketing strategies, and ROI forecasting.</p>
-                        
-                        <div class="featured-meta">
-                            <div class="meta-item">
-                                <strong>Technologies Used:</strong> <span>[Placeholder] Google Workspace, SPSS, Canva</span>
-                            </div>
-                            <div class="meta-item">
-                                <strong>Skills Learned:</strong> <span>[Placeholder] Strategic Planning, Data Analysis, Presentation</span>
-                            </div>
-                            <div class="meta-item">
-                                <strong>Status:</strong> <span class="status-badge status-completed">[Placeholder] Completed</span>
-                            </div>
-                        </div>
-
-                        <div class="featured-actions">
-                            <a href="#" class="btn btn-primary">View Details</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View PDF</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Project Grid -->
-        <section class="project-grid-section" aria-labelledby="project-grid-heading">
-            <div class="container">
-                <h2 id="project-grid-heading" class="section-title">All Projects</h2>
-                <div class="projects-grid">
+                <!-- Optional Filters could go here in the future -->
+                
+                <div class="grid cards-grid">
                     
                     <!-- Project Card 1 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Project Image Placeholder</span>
+                        </div>
                         <div class="card-content">
-                            <span class="badge-category">Academic</span>
-                            <h3 class="card-title">[Placeholder] Consumer Behavior Analysis</h3>
-                            <p class="card-desc">[Placeholder] An academic study investigating purchasing patterns of university students in Bangladesh regarding tech accessories.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] 2025</span>
-                                <span class="meta-tech">[Placeholder] SPSS, Excel</span>
+                            <span class="badge">Marketing Strategy</span>
+                            <h3 class="card-title">Placeholder Project Title 1</h3>
+                            <p class="card-desc">A comprehensive marketing strategy developed for a hypothetical brand, encompassing market analysis, competitor benchmarking, and a Go-To-Market plan.</p>
+                            <div class="tags-container" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Market Research</span>
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">SWOT Analysis</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
+                            <div class="card-actions" style="display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">View Case Study</a>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Project Card 2 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Project Image Placeholder</span>
+                        </div>
                         <div class="card-content">
-                            <span class="badge-category">Marketing</span>
-                            <h3 class="card-title">[Placeholder] Local E-commerce Digital Campaign</h3>
-                            <p class="card-desc">[Placeholder] A mock digital marketing campaign designed to increase brand awareness for a startup e-commerce platform in Jashore.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] 2025</span>
-                                <span class="meta-tech">[Placeholder] Meta Ads, Canva</span>
+                            <span class="badge">Digital Campaign</span>
+                            <h3 class="card-title">Placeholder Project Title 2</h3>
+                            <p class="card-desc">An integrated digital marketing campaign proposal aimed at increasing brand awareness and lead generation through targeted social media advertising and SEO.</p>
+                            <div class="tags-container" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Social Media</span>
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">SEO</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
+                            <div class="card-actions" style="display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">View Presentation</a>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Project Card 3 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Project Image Placeholder</span>
+                        </div>
                         <div class="card-content">
-                            <span class="badge-category">Presentation</span>
-                            <h3 class="card-title">[Placeholder] Strategic Management Case Study</h3>
-                            <p class="card-desc">[Placeholder] A detailed presentation evaluating the turnaround strategy of a major global corporation, applied to local business models.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] 2024</span>
-                                <span class="meta-tech">[Placeholder] PowerPoint, Research</span>
+                            <span class="badge">Data Analysis</span>
+                            <h3 class="card-title">Placeholder Project Title 3</h3>
+                            <p class="card-desc">Analysis of consumer behavior datasets to identify purchasing trends and segment audiences for more personalized marketing efforts.</p>
+                            <div class="tags-container" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Excel</span>
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Data Visualization</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
+                            <div class="card-actions" style="display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">View Report</a>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Project Card 4 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Project Image Placeholder</span>
+                        </div>
                         <div class="card-content">
-                            <span class="badge-category">Research</span>
-                            <h3 class="card-title">[Placeholder] SERVQUAL in Local Banking</h3>
-                            <p class="card-desc">[Placeholder] A research initiative measuring service quality and customer satisfaction dimensions within commercial banks in Bangladesh.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] 2024</span>
-                                <span class="meta-tech">[Placeholder] Google Forms, SPSS</span>
+                            <span class="badge">Brand Management</span>
+                            <h3 class="card-title">Placeholder Project Title 4</h3>
+                            <p class="card-desc">A brand audit and repositioning strategy aimed at modernizing a legacy brand to appeal to younger demographics without alienating the core customer base.</p>
+                            <div class="tags-container" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Brand Identity</span>
+                                <span class="skill-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Positioning</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
+                            <div class="card-actions" style="display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">View Details</a>
                             </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 5 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">Marketing</span>
-                            <h3 class="card-title">[Placeholder] Brand Audit Report</h3>
-                            <p class="card-desc">[Placeholder] A comprehensive brand audit evaluating the market positioning, strengths, and weaknesses of a selected domestic brand.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] 2023</span>
-                                <span class="meta-tech">[Placeholder] Word, Data Analysis</span>
-                            </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 6 -->
-                    <article class="card-project glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">Future Projects</span>
-                            <h3 class="card-title">[Placeholder] AI Integration in Retail</h3>
-                            <p class="card-desc">[Placeholder] A planned exploratory project on how AI tools can optimize supply chain and personalized marketing for local retailers.</p>
-                            <div class="card-meta">
-                                <span class="meta-date">[Placeholder Date] Ongoing</span>
-                                <span class="meta-tech">[Placeholder] AI Tools, Strategy</span>
-                            </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View Google Drive PDF">View PDF</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Statistics -->
-        <section class="project-stats-section" aria-labelledby="stats-heading">
-            <div class="container">
-                <h2 id="stats-heading" class="sr-only">Project Statistics</h2>
-                <div class="stats-grid">
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Projects Completed</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Research Projects</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Presentations</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Case Studies</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Timeline -->
-        <section class="project-timeline-section" aria-labelledby="timeline-heading">
-            <div class="container">
-                <h2 id="timeline-heading" class="section-title">Development Timeline</h2>
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content glass-panel">
-                            <h3 class="timeline-title">[Placeholder] Project Started</h3>
-                            <p class="timeline-desc">[Placeholder] Initial academic projects and foundational marketing research initiatives.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content glass-panel">
-                            <h3 class="timeline-title">[Placeholder] Research & Analysis</h3>
-                            <p class="timeline-desc">[Placeholder] Deep dive into quantitative analysis, consumer behavior, and market data collection.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content glass-panel">
-                            <h3 class="timeline-title">[Placeholder] Presentation</h3>
-                            <p class="timeline-desc">[Placeholder] Synthesizing data into actionable insights and delivering academic presentations.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content glass-panel">
-                            <h3 class="timeline-title">[Placeholder] Publication / Submission</h3>
-                            <p class="timeline-desc">[Placeholder] Finalizing reports, case studies, and preparing for future academic publication.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item timeline-future">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content glass-panel">
-                            <h3 class="timeline-title">[Placeholder] Future Work</h3>
-                            <p class="timeline-desc">[Placeholder] Expanding portfolio with corporate internships and advanced strategic management projects.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Technologies & Tools -->
-        <section class="technologies-section" aria-labelledby="tech-heading">
-            <div class="container">
-                <h2 id="tech-heading" class="section-title">Technologies & Tools Used</h2>
-                <div class="tech-grid">
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">📊</div>
-                        <h3 class="tech-name">Microsoft Office</h3>
-                        <p class="tech-desc">[Placeholder] Advanced use of Excel, Word, and PowerPoint for reports and analysis.</p>
-                    </article>
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">🎨</div>
-                        <h3 class="tech-name">Canva</h3>
-                        <p class="tech-desc">[Placeholder] Designing professional marketing collateral and presentations.</p>
-                    </article>
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">📈</div>
-                        <h3 class="tech-name">Google Ads</h3>
-                        <p class="tech-desc">[Placeholder] Crafting and analyzing search and display campaigns.</p>
-                    </article>
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">📉</div>
-                        <h3 class="tech-name">SPSS</h3>
-                        <p class="tech-desc">[Placeholder] Statistical analysis for academic marketing research.</p>
-                    </article>
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">☁️</div>
-                        <h3 class="tech-name">Google Workspace</h3>
-                        <p class="tech-desc">[Placeholder] Collaborative tools for team projects and survey data collection.</p>
-                    </article>
-                    <article class="tech-card modern-card text-center">
-                        <div class="tech-icon" aria-hidden="true">🤖</div>
-                        <h3 class="tech-name">AI Tools</h3>
-                        <p class="tech-desc">[Placeholder] Leveraging generative AI for content strategy and productivity.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Projects -->
-        <section class="future-projects-section" aria-labelledby="future-heading">
-            <div class="container">
-                <h2 id="future-heading" class="section-title">What's Next?</h2>
-                <div class="future-grid">
-                    <article class="future-card glass-panel">
-                        <h3 class="future-title">[Placeholder] Future Research</h3>
-                        <p class="future-desc">[Placeholder] Planning to conduct independent research on the impact of omnichannel marketing in the Bangladesh retail sector.</p>
-                    </article>
-                    <article class="future-card glass-panel">
-                        <h3 class="future-title">[Placeholder] Future Marketing Campaign</h3>
-                        <p class="future-desc">[Placeholder] Developing a full-scale integrated marketing communications (IMC) plan for a conceptual B2B startup.</p>
-                    </article>
-                    <article class="future-card glass-panel">
-                        <h3 class="future-title">[Placeholder] Future Business Case</h3>
-                        <p class="future-desc">[Placeholder] Compiling an extensive business case study for an upcoming national academic competition.</p>
-                    </article>
-                    <article class="future-card glass-panel">
-                        <h3 class="future-title">[Placeholder] Portfolio Expansion</h3>
-                        <p class="future-desc">[Placeholder] Continuously adding real-world client projects and internship experiences to this professional portfolio.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call To Action -->
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Interested in seeing more of my work?</h2>
-                <p class="cta-text">Explore my dedicated research page for in-depth academic papers, or reach out to discuss future collaborations and opportunities.</p>
-                <div class="cta-button-group">
-                    <a href="research.html" class="btn btn-primary btn-large">View Research</a>
-                    <a href="contact.html" class="btn btn-secondary btn-large">Contact Me</a>
-                    <a href="files/resume.pdf" class="btn btn-outline btn-large" download>Download CV</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="js/main.js" defer></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
