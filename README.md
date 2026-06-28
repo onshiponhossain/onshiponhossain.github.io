@@ -1,1 +1,1 @@
-Upload your photo as images/profile.jpg and CV as files/resume.pdf
+Upload profile photo to images/profile.jpg and CV to files/resume.pdf
