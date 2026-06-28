@@ -3,298 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="Learn more about Md. Shipon Hossain, a Marketing Student at Jashore University of Science and Technology. Discover his journey, core values, mission, and career aspirations.">
-    <meta name="keywords" content="About Md. Shipon Hossain, Marketing Student, Jashore University of Science and Technology, Biography, Career Journey, Values">
-    <meta name="author" content="Md. Shipon Hossain">
+    <meta name="description" content="Learn more about Md. Shipon Hossain, a marketing student at JUST with a passion for brand strategy and consumer behavior.">
+    <meta name="theme-color" content="#0078D4">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="About | Md. Shipon Hossain">
+    <meta property="og:description" content="Learn more about Md. Shipon Hossain, a marketing student at JUST.">
+    <meta property="og:type" content="website">
     
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://www.yourdomain.com/about.html">
-    <meta property="og:title" content="About | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="Discover the journey, mission, and professional goals of Md. Shipon Hossain, Marketing Student at JUST.">
-    <meta property="og:image" content="images/profile.jpg">
+    <title>About | Md. Shipon Hossain</title>
     
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/about.html">
-    <meta property="twitter:title" content="About | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="Discover the journey, mission, and professional goals of Md. Shipon Hossain, Marketing Student at JUST.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="canonical" href="https://www.yourdomain.com/about.html">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active" aria-current="page">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <section class="page-hero" aria-labelledby="about-title">
-            <div class="container hero-centered">
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li aria-current="page">About</li>
-                    </ol>
-                </nav>
-                <h1 id="about-title" class="page-title">About Me</h1>
-                <p class="page-subtitle">Get to know more about me, my journey, values, and aspirations.</p>
+        <!-- Page Header -->
+        <section class="page-header reveal">
+            <div class="container">
+                <h1 class="page-title">About Me</h1>
+                <p class="page-subtitle">Marketing Strategist, Data Enthusiast, and Lifelong Learner.</p>
             </div>
         </section>
 
-        <section class="biography-section" aria-labelledby="bio-heading">
-            <div class="container bio-grid">
-                <div class="bio-image-col">
-                    <div class="image-wrapper glass-panel">
-                        <img src="images/profile.jpg" alt="Portrait of Md. Shipon Hossain" class="profile-image-large">
+        <!-- About Content Section -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="card glass-card hover-glow" style="padding: 3rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: flex-start;">
+                        
+                        <!-- Image Column -->
+                        <div style="flex: 1 1 300px;">
+                            <div class="image-placeholder portrait-placeholder" style="width: 100%; aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                                <span class="placeholder-text">Professional Photo</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Column -->
+                        <div style="flex: 2 1 500px; display: flex; flex-direction: column; gap: 1.5rem;">
+                            <h2 style="font-family: var(--font-heading); font-size: 2rem; color: var(--text-color); margin-bottom: 0.5rem;">
+                                Hello! I'm Md. Shipon Hossain.
+                            </h2>
+                            
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                                I am a dedicated <strong>Marketing Student</strong> at the esteemed <strong>Jashore University of Science and Technology (JUST)</strong> in Bangladesh. My academic journey is driven by a deep fascination with how brands communicate, how consumers make decisions, and how data can bridge the gap between the two.
+                            </p>
+                            
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                                In today's rapidly evolving digital landscape, I believe that effective marketing is no longer just about selling a product—it's about telling a compelling story and creating genuine value. Throughout my coursework and practical projects, I have cultivated a strong foundation in <em>strategic planning, market research, brand management, and digital marketing</em>.
+                            </p>
+
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                                Beyond the classroom, I am actively involved in extracurricular activities and leadership roles that hone my soft skills, particularly in teamwork, communication, and complex problem-solving. I am constantly seeking out new challenges, certifications, and real-world case studies to refine my expertise.
+                            </p>
+                            
+                            <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="#" class="btn btn-primary ripple" target="_blank" rel="noopener noreferrer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    Download Resume (PDF)
+                                </a>
+                                <a href="contact.html" class="btn btn-outline ripple">Let's Connect</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="bio-text-col">
-                    <h2 id="bio-heading" class="section-title text-left">Professional Biography</h2>
-                    <div class="prose">
-                        <p>[Placeholder] Welcome to my professional portfolio. I am a dedicated marketing student with a passion for uncovering consumer insights, developing strategic campaigns, and driving brand growth. My academic journey has equipped me with a strong foundation in market research, digital marketing, and business strategy.</p>
-                        <p>[Placeholder] Beyond academics, I actively seek opportunities to bridge the gap between theoretical knowledge and practical application. Whether collaborating on research papers, analyzing market trends, or participating in leadership initiatives, I am driven by a desire to create meaningful impact in the corporate world.</p>
-                        <p>[Placeholder] As I look toward the future, I aim to leverage my skills in a dynamic environment, constantly learning and adapting to the ever-evolving landscape of global business and modern marketing technologies.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <section class="personal-info-section" aria-labelledby="info-heading">
+        <!-- Core Philosophy Snippet -->
+        <section class="section reveal">
             <div class="container">
-                <h2 id="info-heading" class="section-title">Personal Information</h2>
-                <div class="info-card glass-panel">
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">Full Name:</span>
-                            <span class="info-value">Md. Shipon Hossain</span>
-                        </li>
-                        <li>
-                            <span class="info-label">University:</span>
-                            <span class="info-value">Jashore University of Science and Technology</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Department:</span>
-                            <span class="info-value">[Placeholder Department]</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Email:</span>
-                            <span class="info-value"><a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a></span>
-                        </li>
-                        <li>
-                            <span class="info-label">Nationality:</span>
-                            <span class="info-value">[Placeholder Nationality]</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Languages:</span>
-                            <span class="info-value">[Placeholder Languages]</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Career Goal:</span>
-                            <span class="info-value">[Placeholder Career Goal]</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Current Status:</span>
-                            <span class="info-value">[Placeholder Current Status]</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mission-vision-section" aria-label="Mission and Vision">
-            <div class="container grid-two-col">
-                <article class="modern-card">
-                    <h3 class="card-heading">Mission</h3>
-                    <p class="card-text">[Placeholder] To continuously develop my marketing acumen and research capabilities, applying data-driven strategies to solve complex business challenges while maintaining the highest standard of professional ethics.</p>
-                </article>
-                <article class="modern-card">
-                    <h3 class="card-heading">Vision</h3>
-                    <p class="card-text">[Placeholder] To emerge as a forward-thinking marketing leader who bridges the gap between innovative technology and human-centric business solutions, driving sustainable growth in the global market.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="core-values-section" aria-labelledby="values-heading">
-            <div class="container">
-                <h2 id="values-heading" class="section-title">Core Values</h2>
-                <div class="values-grid">
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">🛡️</div>
-                        <h3 class="value-title">Integrity</h3>
-                    </article>
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">📚</div>
-                        <h3 class="value-title">Continuous Learning</h3>
-                    </article>
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">🎨</div>
-                        <h3 class="value-title">Creativity</h3>
-                    </article>
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">🎯</div>
-                        <h3 class="value-title">Leadership</h3>
-                    </article>
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">🤝</div>
-                        <h3 class="value-title">Teamwork</h3>
-                    </article>
-                    <article class="value-card glass-panel">
-                        <div class="value-icon" aria-hidden="true">💡</div>
-                        <h3 class="value-title">Innovation</h3>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="roadmap-section" aria-labelledby="roadmap-heading">
-            <div class="container">
-                <h2 id="roadmap-heading" class="section-title">Career Roadmap</h2>
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
-                            <p class="timeline-desc">[Placeholder Institution] | [Placeholder Year]</p>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    
+                    <div class="card glass-card hover-lift">
+                        <div class="card-content" style="text-align: center; padding: 2rem;">
+                            <div style="color: var(--primary-color); margin-bottom: 1rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem;">Data-Driven Focus</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Relying on solid analytics and market research to guide strategic decisions rather than intuition alone.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
-                            <p class="timeline-desc">[Placeholder Institution] | [Placeholder Year]</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">Bachelor of Business Administration (BBA)</h3>
-                            <p class="timeline-desc">Jashore University of Science and Technology | [Placeholder Year]</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item timeline-future">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">Master of Business Administration (MBA)</h3>
-                            <p class="timeline-desc">[Future Aspiration] | [Placeholder Details]</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item timeline-future">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">Professional Career</h3>
-                            <p class="timeline-desc">[Future Goal] | Seeking corporate and strategic roles</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="interests-section" aria-labelledby="interests-heading">
-            <div class="container">
-                <h2 id="interests-heading" class="section-title">Personal Interests</h2>
-                <div class="interests-grid">
-                    <span class="interest-tag">Marketing</span>
-                    <span class="interest-tag">Research</span>
-                    <span class="interest-tag">Digital Marketing</span>
-                    <span class="interest-tag">Reading</span>
-                    <span class="interest-tag">Technology</span>
-                    <span class="interest-tag">Business Strategy</span>
-                </div>
-            </div>
-        </section>
+                    <div class="card glass-card hover-lift">
+                        <div class="card-content" style="text-align: center; padding: 2rem;">
+                            <div style="color: var(--primary-color); margin-bottom: 1rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem;">Creative Strategy</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Blending analytical rigor with out-of-the-box creative thinking to craft memorable brand experiences.</p>
+                        </div>
+                    </div>
 
-        <section class="quote-section" aria-label="Inspirational Quote">
-            <div class="container">
-                <blockquote class="inspirational-quote glass-panel">
-                    <p>"[Placeholder Quote] Marketing is no longer about the stuff that you make, but about the stories you tell."</p>
-                    <footer class="quote-author">— [Placeholder Author]</footer>
-                </blockquote>
-            </div>
-        </section>
+                    <div class="card glass-card hover-lift">
+                        <div class="card-content" style="text-align: center; padding: 2rem;">
+                            <div style="color: var(--primary-color); margin-bottom: 1rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem;">Continuous Growth</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Committed to lifelong learning, staying adaptable to new industry trends, tools, and methodologies.</p>
+                        </div>
+                    </div>
 
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Interested in working together?</h2>
-                <p class="cta-text">I am always open to discussing academic collaborations, corporate opportunities, and professional networking.</p>
-                <div class="cta-button-group">
-                    <a href="contact.html" class="btn btn-primary btn-large">Contact Me</a>
-                    <a href="files/resume.pdf" class="btn btn-secondary btn-large" download>Download CV</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
