@@ -3,288 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="Professional portfolio of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology. Explore projects, research, and achievements.">
-    <meta name="keywords" content="Md. Shipon Hossain, Marketing, Jashore University of Science and Technology, Portfolio, Business, Research, MBA">
-    <meta name="author" content="Md. Shipon Hossain">
-    
+    <meta name="description" content="Portfolio of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology (JUST), Bangladesh.">
+    <meta name="theme-color" content="#0078D4">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Md. Shipon Hossain | Marketing Professional">
+    <meta property="og:description" content="Portfolio of Md. Shipon Hossain, Marketing Student at JUST.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/">
-    <meta property="og:title" content="Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="Professional portfolio of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology.">
-    <meta property="og:image" content="images/profile.jpg">
     
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/">
-    <meta property="twitter:title" content="Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="Professional portfolio of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <title>Md. Shipon Hossain | Portfolio</title>
     
-    <link rel="canonical" href="https://www.yourdomain.com/">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-wrapper">
-                <div class="hero-text-content">
-                    <span class="badge-professional">Available for Opportunities</span>
-                    <h1 id="hero-title" class="hero-heading">Md. Shipon Hossain</h1>
-                    <h2 class="hero-subheading">Marketing Student</h2>
-                    <p class="hero-intro">
-                        Driven Marketing Student at Jashore University of Science and Technology. Focused on strategic growth, data-driven research, and impactful communication for corporate and business excellence.
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="name">Md. Shipon Hossain</h1>
+                    <h2 class="title">Marketing Student & Aspiring Professional</h2>
+                    <p class="summary">
+                        Currently studying at Jashore University of Science and Technology (JUST), Bangladesh. 
+                        Passionate about strategic marketing, data-driven decisions, and creating impactful campaigns.
                     </p>
                     <div class="hero-actions">
-                        <a href="files/resume.pdf" class="btn btn-primary" download>Download CV</a>
-                        <a href="projects.html" class="btn btn-secondary">View Projects</a>
-                        <a href="contact.html" class="btn btn-outline">Contact Me</a>
+                        <a href="contact.html" class="btn btn-primary ripple">Get in Touch</a>
+                        <a href="projects.html" class="btn btn-outline ripple">View Work</a>
                     </div>
                 </div>
-                <div class="hero-visual-content">
-                    <div class="bg-blur-placeholder" aria-hidden="true"></div>
-                    <img src="images/profile.jpg" alt="Portrait of Md. Shipon Hossain" class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="image-placeholder portrait-placeholder">
+                        <span class="placeholder-text">Photo Placeholder</span>
+                    </div>
                 </div>
             </div>
-            <div class="scroll-prompt" aria-hidden="true">
-                <span class="scroll-text">Scroll down</span>
-                <span class="scroll-icon">↓</span>
-            </div>
         </section>
 
-        <section class="statistics" aria-label="Academic and Professional Statistics">
-            <div class="stats-grid">
-                <article class="stat-card">
-                    <h3 class="stat-number">3.xx</h3>
-                    <p class="stat-label">Current CGPA</p>
-                </article>
-                <article class="stat-card">
-                    <h3 class="stat-number">XX+</h3>
-                    <p class="stat-label">Projects Completed</p>
-                </article>
-                <article class="stat-card">
-                    <h3 class="stat-number">XX+</h3>
-                    <p class="stat-label">Certificates Earned</p>
-                </article>
-                <article class="stat-card">
-                    <h3 class="stat-number">XX+</h3>
-                    <p class="stat-label">Research Papers</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="featured-skills" aria-labelledby="skills-heading">
+        <!-- Brief About Snippet -->
+        <section class="section reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="skills-heading" class="section-title">Core Competencies</h2>
+                    <h2 class="section-title">About Me</h2>
+                    <a href="about.html" class="see-more">Read Full Bio &rarr;</a>
                 </div>
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3 class="skill-name">Marketing</h3>
-                    </article>
-                    <article class="skill-card">
-                        <h3 class="skill-name">Digital Marketing</h3>
-                    </article>
-                    <article class="skill-card">
-                        <h3 class="skill-name">Research</h3>
-                    </article>
-                    <article class="skill-card">
-                        <h3 class="skill-name">Google Ads</h3>
-                    </article>
-                    <article class="skill-card">
-                        <h3 class="skill-name">Communication</h3>
-                    </article>
-                    <article class="skill-card">
-                        <h3 class="skill-name">Leadership</h3>
-                    </article>
+                <div class="card glass-card hover-glow">
+                    <p>
+                        I am an enthusiastic marketing student dedicated to understanding consumer behavior and market dynamics. 
+                        With a strong foundation built at JUST, I am constantly exploring the intersection of traditional marketing principles and modern digital strategies. 
+                        My goal is to leverage analytical skills and creative thinking to solve real-world business challenges.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="featured-projects" aria-labelledby="projects-heading">
+        <!-- Featured Projects Snippet -->
+        <section class="section reveal">
             <div class="container">
-                <div class="section-header-row">
-                    <h2 id="projects-heading" class="section-title">Featured Projects</h2>
-                    <a href="projects.html" class="link-view-all" aria-label="View all projects">View All Projects</a>
+                <div class="section-header">
+                    <h2 class="section-title">Featured Work</h2>
+                    <a href="projects.html" class="see-more">All Projects &rarr;</a>
                 </div>
-                <div class="projects-grid">
-                    <article class="card-project">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                <div class="grid cards-grid">
+                    <!-- Project Card 1 -->
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Placeholder Title 1</h3>
-                            <p class="card-desc">Placeholder description outlining the scope, strategy, and execution of this specific marketing or academic project.</p>
-                            <div class="card-actions">
-                                <a href="projects.html" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">GitHub Placeholder</a>
-                            </div>
+                            <span class="badge">Marketing Strategy</span>
+                            <h3 class="card-title">Placeholder Project Title 1</h3>
+                            <p class="card-desc">A brief description of this strategic marketing project highlighting key achievements and methodologies used.</p>
+                            <a href="#" class="btn btn-text ripple">View Details &rarr;</a>
                         </div>
-                    </article>
-                    <article class="card-project">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Placeholder Title 2</h3>
-                            <p class="card-desc">Placeholder description outlining the scope, strategy, and execution of this specific marketing or academic project.</p>
-                            <div class="card-actions">
-                                <a href="projects.html" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">GitHub Placeholder</a>
-                            </div>
+                            <span class="badge">Market Research</span>
+                            <h3 class="card-title">Placeholder Project Title 2</h3>
+                            <p class="card-desc">Summary of research findings, data collection methods, and the actionable insights derived for businesses.</p>
+                            <a href="#" class="btn btn-text ripple">View Details &rarr;</a>
                         </div>
-                    </article>
-                    <article class="card-project">
-                        <div class="card-image-placeholder" aria-label="Placeholder for project thumbnail"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Placeholder Title 3</h3>
-                            <p class="card-desc">Placeholder description outlining the scope, strategy, and execution of this specific marketing or academic project.</p>
-                            <div class="card-actions">
-                                <a href="projects.html" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">GitHub Placeholder</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-research" aria-labelledby="research-heading">
-            <div class="container">
-                <div class="section-header-row">
-                    <h2 id="research-heading" class="section-title">Featured Research</h2>
-                    <a href="research.html" class="link-view-all" aria-label="View all research">View All Research</a>
-                </div>
-                <div class="research-grid">
-                    <article class="card-research">
-                        <span class="research-tag">Placeholder Category</span>
-                        <h3 class="research-title">Placeholder Research Title 1</h3>
-                        <p class="research-abstract">A brief abstract placeholder explaining the methodology, scope, and findings of the research paper.</p>
-                        <a href="research.html" class="btn-text">Read Paper →</a>
-                    </article>
-                    <article class="card-research">
-                        <span class="research-tag">Placeholder Category</span>
-                        <h3 class="research-title">Placeholder Research Title 2</h3>
-                        <p class="research-abstract">A brief abstract placeholder explaining the methodology, scope, and findings of the research paper.</p>
-                        <a href="research.html" class="btn-text">Read Paper →</a>
-                    </article>
-                    <article class="card-research">
-                        <span class="research-tag">Placeholder Category</span>
-                        <h3 class="research-title">Placeholder Research Title 3</h3>
-                        <p class="research-abstract">A brief abstract placeholder explaining the methodology, scope, and findings of the research paper.</p>
-                        <a href="research.html" class="btn-text">Read Paper →</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-certificates" aria-labelledby="certificates-heading">
-            <div class="container">
-                <div class="section-header-row">
-                    <h2 id="certificates-heading" class="section-title">Featured Certificates</h2>
-                    <a href="certificates.html" class="link-view-all" aria-label="View all certificates">View All Certificates</a>
-                </div>
-                <div class="certificates-grid">
-                    <article class="card-certificate">
-                        <div class="cert-icon" aria-hidden="true">🔖</div>
-                        <h3 class="cert-title">Placeholder Certificate 1</h3>
-                        <p class="cert-issuer">Placeholder Organization</p>
-                    </article>
-                    <article class="card-certificate">
-                        <div class="cert-icon" aria-hidden="true">🔖</div>
-                        <h3 class="cert-title">Placeholder Certificate 2</h3>
-                        <p class="cert-issuer">Placeholder Organization</p>
-                    </article>
-                    <article class="card-certificate">
-                        <div class="cert-icon" aria-hidden="true">🔖</div>
-                        <h3 class="cert-title">Placeholder Certificate 3</h3>
-                        <p class="cert-issuer">Placeholder Organization</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Ready to Collaborate?</h2>
-                <p class="cta-text">Open to corporate roles, internships, and networking opportunities. Let's connect and discuss how I can bring value to your organization.</p>
-                <div class="cta-button-group">
-                    <a href="contact.html" class="btn btn-primary btn-large">Contact Me</a>
-                    <a href="files/resume.pdf" class="btn btn-secondary btn-large" download>Download CV</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
