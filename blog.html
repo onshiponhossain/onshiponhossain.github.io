@@ -3,259 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Blog | Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="Professional knowledge blog featuring articles on marketing, research, consumer behaviour, business strategy, and personal development by Md. Shipon Hossain.">
-    <meta name="keywords" content="Blog, Marketing, Digital Marketing, Research, Business, Personal Development, Md. Shipon Hossain">
-    <meta name="author" content="Md. Shipon Hossain">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Blog and articles on marketing, business, and strategy by Md. Shipon Hossain.">
+    <meta name="theme-color" content="#0078D4">
+    <meta property="og:title" content="Blog | Md. Shipon Hossain">
+    <meta property="og:description" content="Blog and articles on marketing, business, and strategy by Md. Shipon Hossain.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/blog.html">
-    <meta property="og:title" content="Blog | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="Insights on marketing, research, business, and lifelong learning.">
-    <meta property="og:image" content="images/profile.jpg">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/blog.html">
-    <meta property="twitter:title" content="Blog | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="Insights on marketing, research, business, and lifelong learning.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <title>Blog | Md. Shipon Hossain</title>
     
-    <!-- Canonical URL & PWA -->
-    <link rel="canonical" href="https://www.yourdomain.com/blog.html">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <!-- Navigation -->
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <!-- Hero Banner -->
-        <section class="page-hero" aria-labelledby="blog-title">
-            <div class="container hero-centered">
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li aria-current="page">Blog</li>
-                    </ol>
-                </nav>
-                <h1 id="blog-title" class="page-title">Blog</h1>
-                <p class="page-subtitle">Thoughts, ideas, research and lifelong learning.</p>
+        <!-- Page Header -->
+        <section class="page-header reveal">
+            <div class="container">
+                <h1 class="page-title">Blog & Articles</h1>
+                <p class="page-subtitle">Thoughts, insights, and analysis on marketing trends and business strategy.</p>
             </div>
-        </section>
-
-        <!-- Search Bar -->
-        <section class="search-section container">
-            <div class="search-wrapper">
-                <input type="search" placeholder="Search articles..." aria-label="Search articles" class="search-input">
-            </div>
-        </section>
-
-        <!-- Category Filters -->
-        <section class="filter-section container" aria-label="Filter articles by category">
-            <div class="filter-group">
-                <button class="btn-filter active">All</button>
-                <button class="btn-filter">Marketing</button>
-                <button class="btn-filter">Research</button>
-                <button class="btn-filter">Books</button>
-                <button class="btn-filter">Technology</button>
-                <button class="btn-filter">Career</button>
-                <button class="btn-filter">AI</button>
-                <button class="btn-filter">Business</button>
-                <button class="btn-filter">Digital Marketing</button>
-                <button class="btn-filter">Productivity</button>
-            </div>
-        </section>
-
-        <!-- Featured Article -->
-        <section class="featured-article-section container" aria-labelledby="featured-heading">
-            <h2 id="featured-heading" class="sr-only">Featured Article</h2>
-            <article class="featured-article-card glass-panel">
-                <div class="featured-img-placeholder"></div>
-                <div class="featured-body">
-                    <span class="badge-category">Marketing Strategy</span>
-                    <h3 class="article-title">[Placeholder] The Future of Marketing in Emerging Economies</h3>
-                    <p class="article-excerpt">[Placeholder] An in-depth exploration of how digital transformation and consumer behavior shifts are reshaping the marketing landscape in Bangladesh and beyond.</p>
-                    <div class="article-meta">
-                        <span>By Md. Shipon Hossain</span> • <span>[Date]</span> • <span>8 min read</span>
-                    </div>
-                    <a href="#" class="btn btn-primary">Continue Reading</a>
-                </div>
-            </article>
         </section>
 
         <!-- Blog Grid -->
-        <section class="blog-grid-section container" aria-labelledby="blog-grid-heading">
-            <h2 id="blog-grid-heading" class="section-title">Latest Articles</h2>
-            <div class="blog-grid">
-                <!-- Blog Cards x12 -->
-                <article class="card-blog glass-panel">
-                    <div class="card-img-placeholder"></div>
-                    <div class="card-body">
-                        <span class="badge-category">Research</span>
-                        <h3 class="blog-title">[Placeholder] Case Study: E-commerce Trends</h3>
-                        <p class="blog-excerpt">[Placeholder] Analyzing the shift in consumer buying patterns during the current fiscal year.</p>
-                        <a href="#" class="btn btn-text">Continue Reading →</a>
-                    </div>
-                </article>
-                <!-- Repeat logic for other 11 articles -->
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-                <div class="card-blog-placeholder"></div>
-            </div>
-        </section>
+        <section class="section reveal">
+            <div class="container">
+                <div class="grid cards-grid">
+                    
+                    <!-- Blog Post 1 -->
+                    <article class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Article Image Placeholder</span>
+                        </div>
+                        <div class="card-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span class="badge">Digital Marketing</span>
+                                <span class="date" style="font-size: 0.85rem; color: var(--text-secondary);">Oct 15, YYYY</span>
+                            </div>
+                            <h3 class="card-title">The Future of AI in Consumer Targeting</h3>
+                            <p class="card-desc">Exploring how artificial intelligence and machine learning are fundamentally changing how marketers segment audiences and deliver personalized content at scale.</p>
+                            <div class="card-actions" style="margin-top: 1.5rem;">
+                                <a href="#" class="btn btn-text ripple">Read Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <!-- Popular Topics -->
-        <section class="topics-section container" aria-labelledby="topics-heading">
-            <h2 id="topics-heading" class="section-title">Popular Topics</h2>
-            <div class="topics-grid">
-                <div class="topic-card modern-card"><h3>Marketing</h3></div>
-                <div class="topic-card modern-card"><h3>Research</h3></div>
-                <div class="topic-card modern-card"><h3>AI</h3></div>
-                <div class="topic-card modern-card"><h3>Google Ads</h3></div>
-                <div class="topic-card modern-card"><h3>Books</h3></div>
-                <div class="topic-card modern-card"><h3>Leadership</h3></div>
-            </div>
-        </section>
+                    <!-- Blog Post 2 -->
+                    <article class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Article Image Placeholder</span>
+                        </div>
+                        <div class="card-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span class="badge badge-secondary">Brand Strategy</span>
+                                <span class="date" style="font-size: 0.85rem; color: var(--text-secondary);">Sep 22, YYYY</span>
+                            </div>
+                            <h3 class="card-title">Building Brand Loyalty in a Distracted World</h3>
+                            <p class="card-desc">A deep dive into strategies for retaining customer attention and fostering genuine brand loyalty when consumers are overwhelmed with daily digital noise.</p>
+                            <div class="card-actions" style="margin-top: 1.5rem;">
+                                <a href="#" class="btn btn-text ripple">Read Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter-section container">
-            <div class="newsletter-card modern-card">
-                <h2>Stay Updated</h2>
-                <p>Join the newsletter to receive my latest research, insights, and marketing articles directly in your inbox.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" aria-label="Email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
-        </section>
+                    <!-- Blog Post 3 -->
+                    <article class="card glass-card hover-lift hover-glow">
+                        <div class="card-image placeholder-landscape">
+                            <span class="placeholder-text">Article Image Placeholder</span>
+                        </div>
+                        <div class="card-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <span class="badge">Market Research</span>
+                                <span class="date" style="font-size: 0.85rem; color: var(--text-secondary);">Aug 05, YYYY</span>
+                            </div>
+                            <h3 class="card-title">Interpreting Data: Moving Beyond Vanity Metrics</h3>
+                            <p class="card-desc">Why clicks and likes aren't enough anymore. A guide to identifying and measuring the KPIs that actually correlate with business growth and revenue.</p>
+                            <div class="card-actions" style="margin-top: 1.5rem;">
+                                <a href="#" class="btn btn-text ripple">Read Article &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <!-- Writing Philosophy -->
-        <section class="philosophy-section container">
-            <blockquote class="modern-card">
-                <p>"[Placeholder] Writing is a process of thinking. By sharing my research and thoughts on marketing and business, I aim to learn more deeply and contribute to the collective knowledge of my professional community."</p>
-            </blockquote>
-        </section>
-
-        <!-- Featured Books & Thoughts -->
-        <section class="sidebar-section container">
-            <div class="split-grid">
-                <div class="books-col">
-                    <h2 class="section-title">Featured Books</h2>
-                    <div class="book-list">
-                        <div class="book-item"><h3>Atomic Habits</h3></div>
-                        <div class="book-item"><h3>The Psychology of Money</h3></div>
-                    </div>
                 </div>
-                <div class="thoughts-col">
-                    <h2 class="section-title">Recent Thoughts</h2>
-                    <ul class="thoughts-list">
-                        <li>[Placeholder] Quick thoughts on personal productivity.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call To Action -->
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Let's Learn Together.</h2>
-                <p class="cta-text">Check out my projects and research, or contact me to share your own insights and ideas.</p>
-                <div class="cta-button-group">
-                    <a href="projects.html" class="btn btn-primary btn-large">Projects</a>
-                    <a href="research.html" class="btn btn-secondary btn-large">Research</a>
-                    <a href="contact.html" class="btn btn-outline btn-large">Contact Me</a>
+                
+                <!-- Pagination (Optional Placeholder) -->
+                <div style="display: flex; justify-content: center; margin-top: 3rem; gap: 0.5rem;">
+                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">&larr; Prev</a>
+                    <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">1</a>
+                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">2</a>
+                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Next &rarr;</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="js/main.js" defer></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
