@@ -3,589 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills | Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="Explore the professional skills, marketing expertise, and technical proficiencies of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology.">
-    <meta name="keywords" content="Skills, Marketing, Digital Marketing, Research, Md. Shipon Hossain, Jashore University of Science and Technology, Portfolio">
-    <meta name="author" content="Md. Shipon Hossain">
-    
+    <meta name="description" content="Professional skills and competencies of Md. Shipon Hossain.">
+    <meta name="theme-color" content="#0078D4">
+    <meta property="og:title" content="Skills | Md. Shipon Hossain">
+    <meta property="og:description" content="Professional skills and competencies of Md. Shipon Hossain.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/skills.html">
-    <meta property="og:title" content="Skills | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="Explore the professional skills, marketing expertise, and technical proficiencies of Md. Shipon Hossain.">
-    <meta property="og:image" content="images/profile.jpg">
     
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/skills.html">
-    <meta property="twitter:title" content="Skills | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="Explore the professional skills, marketing expertise, and technical proficiencies of Md. Shipon Hossain.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <title>Skills | Md. Shipon Hossain</title>
     
-    <link rel="canonical" href="https://www.yourdomain.com/skills.html">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html" class="active" aria-current="page">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link active">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <section class="page-hero" aria-labelledby="skills-title">
-            <div class="container hero-centered">
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li aria-current="page">Skills</li>
-                    </ol>
-                </nav>
-                <h1 id="skills-title" class="page-title">Skills</h1>
-                <p class="page-subtitle">My growing professional capabilities and continuous learning journey.</p>
-            </div>
-        </section>
-
-        <section class="skills-intro-section" aria-label="Skills Introduction">
-            <div class="container text-center">
-                <p class="intro-paragraph prose">[Placeholder] These skillsets represent my academic focus, professional training, and independent learning. As the marketing and business landscape evolves rapidly, I am committed to continuously improving my capabilities, embracing new tools, and refining my strategic understanding to deliver impactful results.</p>
-            </div>
-        </section>
-
-        <section class="skill-category-section" aria-labelledby="marketing-heading">
+        <!-- Page Header -->
+        <section class="page-header reveal">
             <div class="container">
-                <h2 id="marketing-heading" class="section-title">Marketing</h2>
-                <div class="skills-card-grid">
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📈</span>
-                            <h3 class="skill-name">Marketing Fundamentals</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of foundational marketing knowledge.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">👥</span>
-                            <h3 class="skill-name">Consumer Behaviour</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of consumer behavior analysis.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🏷️</span>
-                            <h3 class="skill-name">Brand Management</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of building and managing brand identity.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🔍</span>
-                            <h3 class="skill-name">Market Research</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of market research methodologies.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🎯</span>
-                            <h3 class="skill-name">Strategic Marketing</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of strategic planning and execution.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Learning">
-                            <div class="progress-bar placeholder-progress-learning"></div>
-                        </div>
-                        <span class="skill-level">Learning</span>
-                    </article>
-                </div>
+                <h1 class="page-title">Professional Skills</h1>
+                <p class="page-subtitle">A comprehensive overview of my technical expertise, soft skills, and tools.</p>
             </div>
         </section>
 
-        <section class="skill-category-section" aria-labelledby="digital-marketing-heading">
+        <!-- Skills Section -->
+        <section class="section reveal">
             <div class="container">
-                <h2 id="digital-marketing-heading" class="section-title">Digital Marketing</h2>
-                <div class="skills-card-grid">
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🌐</span>
-                            <h3 class="skill-name">Google Ads</h3>
+                <div class="grid skills-grid">
+                    
+                    <!-- Core Marketing Skills -->
+                    <div class="card glass-card hover-glow">
+                        <div class="card-content">
+                            <h3 class="card-title">Core Marketing</h3>
+                            <div class="tags-container">
+                                <span class="skill-tag">Market Research</span>
+                                <span class="skill-tag">Strategic Planning</span>
+                                <span class="skill-tag">Consumer Behavior</span>
+                                <span class="skill-tag">Brand Management</span>
+                                <span class="skill-tag">Digital Marketing</span>
+                                <span class="skill-tag">Data Analysis</span>
+                            </div>
                         </div>
-                        <p class="skill-desc">[Placeholder description of Google Ads campaign management.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📱</span>
-                            <h3 class="skill-name">Meta Ads</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of social media advertising on Meta.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Beginner">
-                            <div class="progress-bar placeholder-progress-beginner"></div>
-                        </div>
-                        <span class="skill-level">Beginner</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🔎</span>
-                            <h3 class="skill-name">SEO</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of Search Engine Optimization techniques.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Learning">
-                            <div class="progress-bar placeholder-progress-learning"></div>
-                        </div>
-                        <span class="skill-level">Learning</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📧</span>
-                            <h3 class="skill-name">Email Marketing</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of email marketing strategies.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📝</span>
-                            <h3 class="skill-name">Content Marketing</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of content creation and strategy.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📊</span>
-                            <h3 class="skill-name">Analytics</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of marketing data analytics.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Beginner">
-                            <div class="progress-bar placeholder-progress-beginner"></div>
-                        </div>
-                        <span class="skill-level">Beginner</span>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    </div>
 
-        <section class="skill-category-section" aria-labelledby="business-heading">
-            <div class="container">
-                <h2 id="business-heading" class="section-title">Business & Soft Skills</h2>
-                <div class="skills-card-grid">
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🎤</span>
-                            <h3 class="skill-name">Presentation</h3>
+                    <!-- Soft Skills -->
+                    <div class="card glass-card hover-glow">
+                        <div class="card-content">
+                            <h3 class="card-title">Soft Skills</h3>
+                            <div class="tags-container">
+                                <span class="skill-tag">Leadership</span>
+                                <span class="skill-tag">Communication</span>
+                                <span class="skill-tag">Problem Solving</span>
+                                <span class="skill-tag">Critical Thinking</span>
+                                <span class="skill-tag">Team Collaboration</span>
+                                <span class="skill-tag">Time Management</span>
+                            </div>
                         </div>
-                        <p class="skill-desc">[Placeholder description of public speaking and presentation skills.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">💬</span>
-                            <h3 class="skill-name">Communication</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of professional communication.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">👑</span>
-                            <h3 class="skill-name">Leadership</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of team leadership and management.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🤝</span>
-                            <h3 class="skill-name">Negotiation</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of conflict resolution and negotiation.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Beginner">
-                            <div class="progress-bar placeholder-progress-beginner"></div>
-                        </div>
-                        <span class="skill-level">Beginner</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🧩</span>
-                            <h3 class="skill-name">Problem Solving</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of analytical problem-solving abilities.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🧠</span>
-                            <h3 class="skill-name">Critical Thinking</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of evaluating business scenarios critically.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    </div>
 
-        <section class="skill-category-section" aria-labelledby="research-heading">
-            <div class="container">
-                <h2 id="research-heading" class="section-title">Research</h2>
-                <div class="skills-card-grid">
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">✍️</span>
-                            <h3 class="skill-name">Academic Writing</h3>
+                    <!-- Tools & Technologies -->
+                    <div class="card glass-card hover-glow">
+                        <div class="card-content">
+                            <h3 class="card-title">Tools & Software</h3>
+                            <div class="tags-container">
+                                <span class="skill-tag">Microsoft Excel</span>
+                                <span class="skill-tag">PowerPoint</span>
+                                <span class="skill-tag">SPSS (Basic)</span>
+                                <span class="skill-tag">Google Analytics</span>
+                                <span class="skill-tag">Canva</span>
+                                <span class="skill-tag">CRM Tools (Placeholder)</span>
+                            </div>
                         </div>
-                        <p class="skill-desc">[Placeholder description of structured academic writing.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📋</span>
-                            <h3 class="skill-name">Report Writing</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of crafting structured research reports.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Advanced">
-                            <div class="progress-bar placeholder-progress-advanced"></div>
-                        </div>
-                        <span class="skill-level">Advanced</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📈</span>
-                            <h3 class="skill-name">SERVQUAL</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of measuring service quality.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📝</span>
-                            <h3 class="skill-name">Survey Design</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of designing effective research surveys.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">📉</span>
-                            <h3 class="skill-name">SPSS</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of utilizing SPSS for data analysis.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Beginner">
-                            <div class="progress-bar placeholder-progress-beginner"></div>
-                        </div>
-                        <span class="skill-level">Beginner</span>
-                    </article>
-                    <article class="skill-modern-card glass-panel">
-                        <div class="skill-header">
-                            <span class="skill-icon" aria-hidden="true">🔬</span>
-                            <h3 class="skill-name">Research Methodology</h3>
-                        </div>
-                        <p class="skill-desc">[Placeholder description of applying standard research frameworks.]</p>
-                        <div class="skill-progress-container" aria-label="Skill level: Intermediate">
-                            <div class="progress-bar placeholder-progress-intermediate"></div>
-                        </div>
-                        <span class="skill-level">Intermediate</span>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    </div>
 
-        <section class="skill-category-section" aria-labelledby="computer-lang-heading">
-            <div class="container grid-two-col">
-                <div class="sub-category-wrapper">
-                    <h3 id="computer-lang-heading" class="section-title text-left">Computer Skills</h3>
-                    <ul class="compact-skill-list">
-                        <li class="glass-panel">
-                            <span class="skill-name">Microsoft Word</span>
-                            <span class="skill-level">Advanced</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">Excel</span>
-                            <span class="skill-level">Intermediate</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">PowerPoint</span>
-                            <span class="skill-level">Advanced</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">Canva</span>
-                            <span class="skill-level">Intermediate</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">Google Workspace</span>
-                            <span class="skill-level">Advanced</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="sub-category-wrapper">
-                    <h3 class="section-title text-left">Languages</h3>
-                    <ul class="compact-skill-list">
-                        <li class="glass-panel">
-                            <span class="skill-name">English</span>
-                            <span class="skill-level">Professional Proficiency</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">Bangla</span>
-                            <span class="skill-level">Native</span>
-                        </li>
-                        <li class="glass-panel">
-                            <span class="skill-name">Other (Placeholder)</span>
-                            <span class="skill-level">Beginner</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-strengths-section" aria-labelledby="strengths-heading">
-            <div class="container">
-                <h2 id="strengths-heading" class="section-title">Featured Strengths</h2>
-                <div class="strengths-grid">
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Continuous Learning</h3>
-                        <p class="strength-desc">[Placeholder] A constant drive to update skills and adapt to new industry trends and technologies.</p>
-                    </article>
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Communication</h3>
-                        <p class="strength-desc">[Placeholder] Excellent ability to convey complex ideas clearly and collaborate across teams.</p>
-                    </article>
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Leadership</h3>
-                        <p class="strength-desc">[Placeholder] Capable of guiding projects, motivating peers, and taking initiative.</p>
-                    </article>
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Adaptability</h3>
-                        <p class="strength-desc">[Placeholder] Quick to embrace change and thrive in dynamic environments.</p>
-                    </article>
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Teamwork</h3>
-                        <p class="strength-desc">[Placeholder] Strong collaborative skills to achieve common organizational goals.</p>
-                    </article>
-                    <article class="strength-card modern-card">
-                        <h3 class="strength-title">Professional Ethics</h3>
-                        <p class="strength-desc">[Placeholder] High standards of integrity, transparency, and accountability in all endeavors.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="current-learning-section" aria-labelledby="learning-heading">
-            <div class="container">
-                <h2 id="learning-heading" class="section-title">Currently Learning</h2>
-                <div class="learning-timeline">
-                    <div class="learning-card glass-panel">
-                        <div class="learning-icon" aria-hidden="true">🚀</div>
-                        <div class="learning-content">
-                            <h3 class="learning-title">Google Ads Specialization</h3>
-                            <p class="learning-desc">[Placeholder] Deepening knowledge in search, display, and video campaigns.</p>
+                    <!-- Languages -->
+                    <div class="card glass-card hover-glow">
+                        <div class="card-content">
+                            <h3 class="card-title">Languages</h3>
+                            <ul class="clean-list">
+                                <li><strong>Bengali:</strong> Native / Bilingual</li>
+                                <li><strong>English:</strong> Professional Working Proficiency</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="learning-card glass-panel">
-                        <div class="learning-icon" aria-hidden="true">🤖</div>
-                        <div class="learning-content">
-                            <h3 class="learning-title">AI Tools for Business</h3>
-                            <p class="learning-desc">[Placeholder] Exploring generative AI applications for marketing productivity.</p>
-                        </div>
-                    </div>
-                    <div class="learning-card glass-panel">
-                        <div class="learning-icon" aria-hidden="true">📊</div>
-                        <div class="learning-content">
-                            <h3 class="learning-title">Advanced Research Methods</h3>
-                            <p class="learning-desc">[Placeholder] Expanding capabilities in quantitative data modeling.</p>
-                        </div>
-                    </div>
-                    <div class="learning-card glass-panel">
-                        <div class="learning-icon" aria-hidden="true">🎓</div>
-                        <div class="learning-content">
-                            <h3 class="learning-title">MBA Preparation</h3>
-                            <p class="learning-desc">[Placeholder] Studying foundational frameworks for advanced business administration.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="software-tools-section" aria-labelledby="tools-heading">
-            <div class="container">
-                <h2 id="tools-heading" class="section-title">Software & Tools</h2>
-                <div class="tools-grid">
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Microsoft Office Icon">🗂️</div>
-                        <span class="tool-name">Microsoft Office</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Google Workspace Icon">☁️</div>
-                        <span class="tool-name">Google Workspace</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Canva Icon">🎨</div>
-                        <span class="tool-name">Canva</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Google Ads Icon">🌐</div>
-                        <span class="tool-name">Google Ads</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Meta Business Suite Icon">📱</div>
-                        <span class="tool-name">Meta Business Suite</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon-placeholder" aria-label="Placeholder Tool Icon">⚙️</div>
-                        <span class="tool-name">Placeholder Tool</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="certifications-preview-section" aria-labelledby="certs-heading">
-            <div class="container">
-                <div class="section-header-row">
-                    <h2 id="certs-heading" class="section-title">Latest Certifications</h2>
-                </div>
-                <div class="certificates-grid">
-                    <article class="card-certificate glass-panel">
-                        <div class="cert-icon" aria-hidden="true">🏅</div>
-                        <h3 class="cert-title">[Placeholder Certificate 1]</h3>
-                        <p class="cert-issuer">[Placeholder Organization]</p>
-                    </article>
-                    <article class="card-certificate glass-panel">
-                        <div class="cert-icon" aria-hidden="true">🏅</div>
-                        <h3 class="cert-title">[Placeholder Certificate 2]</h3>
-                        <p class="cert-issuer">[Placeholder Organization]</p>
-                    </article>
-                </div>
-                <div class="text-center mt-xl">
-                    <a href="certificates.html" class="btn btn-outline">View All Certificates</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Learning Never Stops.</h2>
-                <p class="cta-text">I am constantly evolving my skillset to meet modern business challenges. See how these skills translate into real-world applications.</p>
-                <div class="cta-button-group">
-                    <a href="projects.html" class="btn btn-primary btn-large">View Projects</a>
-                    <a href="contact.html" class="btn btn-secondary btn-large">Contact Me</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
