@@ -3,538 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Research | Md. Shipon Hossain | Marketing Professional & Student</title>
-    <meta name="description" content="Explore the academic research, publications, presentations, and scholarly work of Md. Shipon Hossain, Marketing Student at Jashore University of Science and Technology.">
-    <meta name="keywords" content="Research, Marketing Research, Publications, Academic Portfolio, Md. Shipon Hossain, Jashore University of Science and Technology, Bangladesh">
-    <meta name="author" content="Md. Shipon Hossain">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Academic research and publications by Md. Shipon Hossain.">
+    <meta name="theme-color" content="#0078D4">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Research & Publications | Md. Shipon Hossain">
+    <meta property="og:description" content="Academic research and publications by Md. Shipon Hossain.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourdomain.com/research.html">
-    <meta property="og:title" content="Research | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="og:description" content="Academic research, publications, presentations, and future scholarly work by Md. Shipon Hossain.">
-    <meta property="og:image" content="images/profile.jpg">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yourdomain.com/research.html">
-    <meta property="twitter:title" content="Research | Md. Shipon Hossain | Professional Portfolio">
-    <meta property="twitter:description" content="Academic research, publications, presentations, and future scholarly work by Md. Shipon Hossain.">
-    <meta property="twitter:image" content="images/profile.jpg">
+    <title>Research & Publications | Md. Shipon Hossain</title>
     
-    <!-- Canonical URL & PWA -->
-    <link rel="canonical" href="https://www.yourdomain.com/research.html">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <!-- Navigation -->
-    <header class="navbar" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" aria-label="Home">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="brand-logo">
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Shipon<span class="text-primary">.</span></span>
             </a>
             
-            <nav class="desktop-nav" aria-label="Desktop Menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html" class="active" aria-current="page">Research</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-controls">
-                <button class="btn-search" aria-label="Search site">
-                    <span class="icon-search" aria-hidden="true">🔍</span>
-                </button>
-                <button class="btn-hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
-        </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
     </header>
 
     <main id="main-content">
-        <!-- Hero Banner -->
-        <section class="page-hero" aria-labelledby="research-title">
-            <div class="container hero-centered">
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li aria-current="page">Research</li>
-                    </ol>
-                </nav>
-                <h1 id="research-title" class="page-title">Research</h1>
-                <p class="page-subtitle">Academic research, publications, presentations and future scholarly work.</p>
-            </div>
-        </section>
-
-        <!-- Research Introduction -->
-        <section class="research-intro-section" aria-label="Research Introduction">
-            <div class="container text-center">
-                <p class="intro-paragraph prose">[Placeholder] My academic curiosity drives me to explore the dynamic intersections of consumer behavior, digital marketing, and business strategy within emerging markets like Bangladesh. Through rigorous quantitative and qualitative methodologies, I aim to produce actionable insights that bridge the gap between academic theory and corporate practice. Welcome to my scholarly portfolio.</p>
-            </div>
-        </section>
-
-        <!-- Research Interests -->
-        <section class="research-interests-section" aria-labelledby="interests-heading">
+        <!-- Page Header -->
+        <section class="page-header reveal">
             <div class="container">
-                <h2 id="interests-heading" class="section-title">Research Interests</h2>
-                <div class="interests-grid">
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Marketing</h3>
-                        <p class="interest-desc">[Placeholder] General marketing theories, market orientation, and strategic frameworks.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Consumer Behaviour</h3>
-                        <p class="interest-desc">[Placeholder] Psychological factors influencing buying decisions in South Asian markets.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Digital Marketing</h3>
-                        <p class="interest-desc">[Placeholder] E-commerce trends, social media advertising efficacy, and SEO impact.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Service Quality</h3>
-                        <p class="interest-desc">[Placeholder] Applying SERVQUAL models in the banking, telecom, and healthcare sectors.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Branding</h3>
-                        <p class="interest-desc">[Placeholder] Brand equity, identity formation, and loyalty programs.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Business Strategy</h3>
-                        <p class="interest-desc">[Placeholder] Corporate turnaround, competitive advantage, and strategic management.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">AI in Marketing</h3>
-                        <p class="interest-desc">[Placeholder] Generative AI applications for personalized marketing and analytics.</p>
-                    </article>
-                    <article class="interest-card glass-panel">
-                        <h3 class="interest-title">Sustainability</h3>
-                        <p class="interest-desc">[Placeholder] Green marketing practices and corporate social responsibility (CSR).</p>
-                    </article>
-                </div>
+                <h1 class="page-title">Research & Publications</h1>
+                <p class="page-subtitle">Academic research, working papers, and articles focusing on marketing strategies and consumer behavior.</p>
             </div>
         </section>
 
-        <!-- Featured Research -->
-        <section class="featured-research-section" aria-labelledby="featured-research-heading">
+        <!-- Research List Section -->
+        <section class="section reveal">
             <div class="container">
-                <h2 id="featured-research-heading" class="sr-only">Featured Research</h2>
-                <article class="featured-research-card modern-card">
-                    <div class="featured-image-col">
-                        <div class="featured-image-placeholder" aria-label="Placeholder image for the featured research paper">
-                            <span class="placeholder-icon">📑</span>
-                        </div>
-                    </div>
-                    <div class="featured-content-col">
-                        <span class="badge-category">Featured Publication</span>
-                        <h3 class="featured-title">[Placeholder] The Impact of Digital Marketing on Consumer Buying Behavior in Bangladesh</h3>
-                        <p class="featured-abstract">[Placeholder Abstract] This study investigates the correlation between social media advertising and purchasing decisions among university students in the Khulna division. Utilizing a mixed-methods approach, the paper reveals key insights into brand trust, online engagement metrics, and ROI optimization for local e-commerce startups.</p>
-                        
-                        <div class="featured-meta">
-                            <div class="meta-item">
-                                <strong>Category:</strong> <span>[Placeholder] Digital Marketing</span>
-                            </div>
-                            <div class="meta-item">
-                                <strong>Status:</strong> <span class="status-badge status-published">[Placeholder] Published</span>
-                            </div>
-                            <div class="meta-item">
-                                <strong>Date:</strong> <span>[Placeholder Date] 2025</span>
-                            </div>
-                            <div class="meta-item">
-                                <strong>Keywords:</strong> <span>[Placeholder] E-commerce, Social Media, Consumer Trust</span>
-                            </div>
-                        </div>
-
-                        <div class="featured-actions">
-                            <a href="#" class="btn btn-primary">View Paper</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download PDF</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
-                            <button class="btn btn-text" aria-label="Copy Citation">Citation</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Research Library -->
-        <section class="research-library-section" aria-labelledby="library-heading">
-            <div class="container">
-                <h2 id="library-heading" class="section-title">Research Library</h2>
-                <div class="library-grid">
+                <div class="grid list-grid">
                     
-                    <!-- Research Card 1 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
+                    <!-- Research Item 1 -->
+                    <div class="card glass-card hover-glow list-card">
                         <div class="card-content">
-                            <span class="badge-category">Consumer Behaviour</span>
-                            <h3 class="card-title">[Placeholder] Adoption of Mobile Payment Systems in Rural Bangladesh</h3>
-                            <p class="card-summary">[Placeholder] An empirical study examining the barriers and facilitators of adopting mobile financial services.</p>
                             <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Working Paper</span>
-                                <span class="meta-date">[Placeholder] 2026</span>
+                                <span class="badge">Publication</span>
+                                <span class="date">Month, YYYY</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
+                            <h3 class="card-title">Placeholder Research Title: An Analysis of Consumer Trends</h3>
+                            <p class="card-subtitle" style="margin-bottom: 1rem; color: var(--text-secondary);">
+                                Published in: <em>Journal of Placeholder Marketing (JPM)</em>
+                            </p>
+                            <p class="card-desc">
+                                A comprehensive abstract describing the methodology, findings, and implications of this research. It highlights the impact of digital transformation on traditional marketing channels in emerging markets and provides actionable insights for businesses.
+                            </p>
+                            <div class="card-authors" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                <strong>Authors:</strong> Md. Shipon Hossain, Co-author Placeholder
+                            </div>
+                            <div class="card-actions" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">View PDF</a>
+                                <a href="#" class="btn btn-text ripple" target="_blank" rel="noopener noreferrer">DOI Link &rarr;</a>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
-                    <!-- Research Card 2 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
+                    <!-- Research Item 2 -->
+                    <div class="card glass-card hover-glow list-card">
                         <div class="card-content">
-                            <span class="badge-category">Service Quality</span>
-                            <h3 class="card-title">[Placeholder] SERVQUAL Analysis of Private Hospitals in Jashore</h3>
-                            <p class="card-summary">[Placeholder] Measuring patient satisfaction and service gaps using the classic SERVQUAL dimensions.</p>
                             <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Term Paper</span>
-                                <span class="meta-date">[Placeholder] 2025</span>
+                                <span class="badge badge-secondary">Working Paper</span>
+                                <span class="date">Ongoing</span>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
+                            <h3 class="card-title">Another Placeholder Research Topic</h3>
+                            <p class="card-subtitle" style="margin-bottom: 1rem; color: var(--text-secondary);">
+                                Targeted for: <em>International Conference on Marketing</em>
+                            </p>
+                            <p class="card-desc">
+                                This working paper explores the psychological factors influencing brand loyalty among Gen Z consumers. Data collection is currently underway utilizing mixed-methods research, including surveys and focus groups across multiple demographics.
+                            </p>
+                            <div class="card-authors" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                <strong>Authors:</strong> Md. Shipon Hossain
                             </div>
-                        </div>
-                    </article>
-
-                    <!-- Research Card 3 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">Business Strategy</span>
-                            <h3 class="card-title">[Placeholder] Competitive Strategies of Local FMCG Brands</h3>
-                            <p class="card-summary">[Placeholder] A case study approach evaluating how domestic companies compete against multinational corporations.</p>
-                            <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Under Review</span>
-                                <span class="meta-date">[Placeholder] 2025</span>
+                            <div class="card-actions" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-outline ripple" target="_blank" rel="noopener noreferrer">Read Abstract</a>
                             </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Research Card 4 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">Sustainability</span>
-                            <h3 class="card-title">[Placeholder] Green Marketing and Brand Equity</h3>
-                            <p class="card-summary">[Placeholder] Analyzing consumer willingness to pay a premium for eco-friendly products in urban areas.</p>
-                            <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Conference Paper</span>
-                                <span class="meta-date">[Placeholder] 2024</span>
-                            </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Research Card 5 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">AI in Marketing</span>
-                            <h3 class="card-title">[Placeholder] Generative AI in Content Marketing</h3>
-                            <p class="card-summary">[Placeholder] Evaluating the efficiency and consumer reception of AI-generated advertising copy.</p>
-                            <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Proposal</span>
-                                <span class="meta-date">[Placeholder] 2026</span>
-                            </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Research Card 6 -->
-                    <article class="card-research-item glass-panel">
-                        <div class="card-image-placeholder" aria-label="Placeholder for research thumbnail"></div>
-                        <div class="card-content">
-                            <span class="badge-category">Branding</span>
-                            <h3 class="card-title">[Placeholder] The Role of Influencer Marketing in Brand Trust</h3>
-                            <p class="card-summary">[Placeholder] A quantitative study on how micro-influencers affect brand loyalty among Gen Z consumers.</p>
-                            <div class="card-meta">
-                                <span class="meta-status">[Placeholder] Published</span>
-                                <span class="meta-date">[Placeholder] 2024</span>
-                            </div>
-                            <div class="card-actions-grid">
-                                <a href="#" class="btn btn-small btn-primary">View Details</a>
-                                <a href="#" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Google Drive</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Timeline -->
-        <section class="research-timeline-section" aria-labelledby="timeline-heading">
-            <div class="container">
-                <h2 id="timeline-heading" class="section-title">The Research Process</h2>
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Research Idea & Conceptualization</h3>
-                            <p class="timeline-desc">[Placeholder] Identifying literature gaps and formulating core research questions.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Proposal & Methodology Design</h3>
-                            <p class="timeline-desc">[Placeholder] Drafting the framework, selecting variables, and defining the sampling strategy.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Data Collection</h3>
-                            <p class="timeline-desc">[Placeholder] Executing surveys, conducting interviews, and gathering primary/secondary data.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Analysis & Interpretation</h3>
-                            <p class="timeline-desc">[Placeholder] Utilizing tools like SPSS and Excel to draw statistical conclusions and insights.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Presentation</h3>
-                            <p class="timeline-desc">[Placeholder] Showcasing findings at academic seminars, defenses, and conferences.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Publication</h3>
-                            <p class="timeline-desc">[Placeholder] Submitting the manuscript to academic journals and university repositories.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item timeline-future">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content modern-card">
-                            <h3 class="timeline-title">[Placeholder] Future Research</h3>
-                            <p class="timeline-desc">[Placeholder] Building upon previous findings for advanced MBA and corporate research initiatives.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Research Statistics -->
-        <section class="research-stats-section" aria-labelledby="stats-heading">
-            <div class="container">
-                <h2 id="stats-heading" class="sr-only">Research Statistics</h2>
-                <div class="stats-grid">
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Research Papers</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Conference Papers</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Presentations</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Case Studies</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Reports</p>
-                    </article>
-                    <article class="stat-card modern-card">
-                        <h3 class="stat-number">XX+</h3>
-                        <p class="stat-label">Publications</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Methodology -->
-        <section class="research-methodology-section" aria-labelledby="methodology-heading">
-            <div class="container">
-                <h2 id="methodology-heading" class="section-title">Research Methodology Expertise</h2>
-                <div class="methodology-grid">
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Qualitative</h3>
-                        <p class="method-desc">[Placeholder] Thematic analysis, focus groups, and in-depth interviews.</p>
-                    </article>
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Quantitative</h3>
-                        <p class="method-desc">[Placeholder] Statistical modeling, regression analysis, and hypothesis testing.</p>
-                    </article>
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Mixed Methods</h3>
-                        <p class="method-desc">[Placeholder] Combining descriptive data with numerical validation for comprehensive insights.</p>
-                    </article>
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Survey Design</h3>
-                        <p class="method-desc">[Placeholder] Constructing reliable Likert-scale questionnaires and digital surveys.</p>
-                    </article>
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Interviewing</h3>
-                        <p class="method-desc">[Placeholder] Structured and semi-structured interviews for primary data gathering.</p>
-                    </article>
-                    <article class="method-card glass-panel text-center">
-                        <h3 class="method-title">Case Study</h3>
-                        <p class="method-desc">[Placeholder] In-depth organizational analysis and problem-solving frameworks.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications -->
-        <section class="publications-section" aria-labelledby="publications-heading">
-            <div class="container">
-                <h2 id="publications-heading" class="section-title">Publications & Formats</h2>
-                <div class="publications-grid">
-                    <article class="pub-card modern-card">
-                        <div class="pub-icon" aria-hidden="true">📖</div>
-                        <h3 class="pub-title">Journal Articles</h3>
-                        <p class="pub-desc">[Placeholder] Peer-reviewed articles focusing on marketing strategies and consumer behavior.</p>
-                    </article>
-                    <article class="pub-card modern-card">
-                        <div class="pub-icon" aria-hidden="true">🎤</div>
-                        <h3 class="pub-title">Conference Papers</h3>
-                        <p class="pub-desc">[Placeholder] Academic papers formatted for presentation at national and international conferences.</p>
-                    </article>
-                    <article class="pub-card modern-card">
-                        <div class="pub-icon" aria-hidden="true">📚</div>
-                        <h3 class="pub-title">Book Chapters</h3>
-                        <p class="pub-desc">[Placeholder] Contributions to academic textbooks and comprehensive marketing guides.</p>
-                    </article>
-                    <article class="pub-card modern-card">
-                        <div class="pub-icon" aria-hidden="true">📝</div>
-                        <h3 class="pub-title">Working Papers</h3>
-                        <p class="pub-desc">[Placeholder] Ongoing academic research, pre-prints, and collaborative university projects.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Downloads / Links -->
-        <section class="downloads-section" aria-labelledby="downloads-heading">
-            <div class="container text-center">
-                <h2 id="downloads-heading" class="section-title">Academic Profiles & Downloads</h2>
-                <div class="downloads-flex">
-                    <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Research Portfolio PDF</a>
-                    <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Research CV</a>
-                    <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Google Drive Folder</a>
-                    <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">ResearchGate [Placeholder]</a>
-                    <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">ORCID [Placeholder]</a>
-                    <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Google Scholar [Placeholder]</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Research -->
-        <section class="future-research-section" aria-labelledby="future-heading">
-            <div class="container">
-                <h2 id="future-heading" class="section-title">Future Research Initiatives</h2>
-                <div class="future-research-grid">
-                    <article class="future-res-card glass-panel">
-                        <h3 class="future-res-title">[Placeholder Topic] AI-Driven Customer Retention</h3>
-                        <p class="future-res-desc">[Placeholder] Exploring predictive algorithms in telecom sectors.</p>
-                    </article>
-                    <article class="future-res-card glass-panel">
-                        <h3 class="future-res-title">[Placeholder Topic] Cross-Cultural Branding</h3>
-                        <p class="future-res-desc">[Placeholder] How global brands adapt messaging for the South Asian demographic.</p>
-                    </article>
-                    <article class="future-res-card glass-panel">
-                        <h3 class="future-res-title">[Placeholder Topic] Sustainable Supply Chains</h3>
-                        <p class="future-res-desc">[Placeholder] The marketing benefits of eco-friendly logistics in FMCG.</p>
-                    </article>
-                    <article class="future-res-card glass-panel">
-                        <h3 class="future-res-title">[Placeholder Topic] Digital Payment Ecosystems</h3>
-                        <p class="future-res-desc">[Placeholder] Trust and security perceptions in mobile banking apps.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call To Action -->
-        <section class="cta-banner" aria-labelledby="cta-heading">
-            <div class="cta-container">
-                <h2 id="cta-heading" class="cta-title">Interested in my research?</h2>
-                <p class="cta-text">I am actively seeking academic collaborations, MBA opportunities, and corporate research roles. Let's connect.</p>
-                <div class="cta-button-group">
-                    <a href="contact.html" class="btn btn-primary btn-large">Contact Me</a>
-                    <a href="projects.html" class="btn btn-secondary btn-large">View Projects</a>
-                    <a href="files/resume.pdf" class="btn btn-outline btn-large" download>Download CV</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-grid container">
-            <div class="footer-brand-col">
-                <img src="images/logo.svg" alt="Md. Shipon Hossain Logo" class="footer-logo">
-                <p class="footer-desc">Marketing Student at Jashore University of Science and Technology.</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Md. Shipon Hossain</h3>
+                <p>Marketing Student at JUST</p>
             </div>
-            
-            <nav class="footer-nav-col" aria-label="Footer Quick Links">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact-col">
-                <h3 class="footer-title">Connect</h3>
-                <a href="mailto:offlineshipon@gmail.com" class="footer-email">offlineshipon@gmail.com</a>
-                <div class="social-icons" aria-label="Social Media Links">
-                    <a href="#" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <a href="mailto:offlineshipon@gmail.com">offlineshipon@gmail.com</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Placeholder</a>
             </div>
         </div>
-        
-        <div class="footer-bottom container">
-            <p class="copyright-text">&copy; 2026 Md. Shipon Hossain. All rights reserved.</p>
-            <button class="btn-back-to-top" aria-label="Scroll to top of page">
-                <span>↑ Top</span>
-            </button>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md. Shipon Hossain. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="js/main.js" defer></script>
+    <!-- Back to Top -->
+    <button class="back-to-top ripple" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
